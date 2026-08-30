@@ -1,0 +1,23 @@
+{
+  "name": "food-rewards-system",
+  "version": "1.0.0",
+  "description": "Food rewards points system",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "pg": "^8.11.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
