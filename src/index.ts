@@ -228,9 +228,9 @@ app.get('/api/v1/analytics/:location/:date', async (req: Request, res: Response)
 
     // Calculate summary
     const summary = {
-      total_units: result.rows.reduce((sum, row) => sum + parseInt(row.units_sold), 0),
-      total_revenue: result.rows.reduce((sum, row) => sum + parseInt(row.total_revenue), 0),
-      total_stars: result.rows.reduce((sum, row) => sum + parseInt(row.total_stars), 0),
+      total_units: result.rows.reduce((sum: number, row: any) => sum + parseInt(row.units_sold), 0),
+      total_revenue: result.rows.reduce((sum: number, row: any) => sum + parseInt(row.total_revenue), 0),
+      total_stars: result.rows.reduce((sum: number, row: any) => sum + parseInt(row.total_stars), 0),
     };
 
     res.json({
