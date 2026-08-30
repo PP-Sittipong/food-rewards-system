@@ -1,0 +1,30 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "nixpacks",
+    "buildCommand": "npm install && npm run build"
+  },
+  "deploy": {
+    "startCommand": "npm start",
+    "restartPolicyType": "on_failure",
+    "restartPolicyMaxRetries": 5
+  },
+  "variables": {
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production"
+    },
+    "PORT": {
+      "description": "Port to run on",
+      "value": "3000"
+    },
+    "DATABASE_URL": {
+      "description": "PostgreSQL connection string",
+      "value": "${{ Postgres.DATABASE_URL }}"
+    },
+    "LOG_LEVEL": {
+      "description": "Logging level",
+      "value": "info"
+    }
+  }
+}
